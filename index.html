@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meow 😺❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:black;
+overflow-x:hidden;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* BACKGROUND */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#ff008044,transparent 35%),
+radial-gradient(circle at bottom,#7700ff33,transparent 35%),
+#000;
+z-index:-3;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:0.3;
+animation:move 120s linear infinite;
+z-index:-2;
+}
+
+@keyframes move{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-1000px);
+}
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:30px;
+position:relative;
+}
+
+.hero h1{
+font-size:5rem;
+background:linear-gradient(to right,#ff66b3,#ffd6eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+filter:drop-shadow(0 0 10px #ff0080);
+}
+to{
+filter:drop-shadow(0 0 25px #ff66b3);
+}
+}
+
+.subtitle{
+margin-top:15px;
+font-size:1.3rem;
+opacity:0.85;
+}
+
+.heart{
+font-size:60px;
+margin-top:20px;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.35);
+}
+}
+
+/* FLOATING HEARTS */
+
+.hearts span{
+position:absolute;
+bottom:-50px;
+font-size:20px;
+animation:floatUp 10s linear infinite;
+opacity:0.5;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:50%;animation-delay:4s;}
+.hearts span:nth-child(4){left:70%;animation-delay:1s;}
+.hearts span:nth-child(5){left:85%;animation-delay:3s;}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0) scale(1);
+opacity:0;
+}
+20%{
+opacity:0.7;
+}
+100%{
+transform:translateY(-120vh) scale(1.6);
+opacity:0;
+}
+}
+
+/* PHOTO SECTION */
+
+.gallery-title{
+text-align:center;
+font-size:3rem;
+margin-top:40px;
+margin-bottom:30px;
+color:#ffb6d9;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:20px 30px 80px;
+}
+
+.card{
+position:relative;
+width:300px;
+height:420px;
+border-radius:30px;
+overflow:hidden;
+box-shadow:
+0 0 20px #ff008055,
+0 0 40px #ff008033;
+transition:0.5s;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:
+0 0 35px #ff0080,
+0 0 70px #ff008055;
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+padding:20px;
+background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);
+font-size:1.1rem;
+font-weight:500;
+line-height:1.5;
+}
+
+/* LETTER */
+
+.container{
+display:flex;
+justify-content:center;
+padding:20px 20px 100px;
+}
+
+.letter{
+width:100%;
+max-width:1000px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:35px;
+padding:60px;
+box-shadow:
+0 0 40px rgba(255,0,120,0.2);
+}
+
+.letter h2{
+text-align:center;
+font-size:3rem;
+margin-bottom:35px;
+color:#ffb6d9;
+}
+
+.letter p{
+font-size:1.12rem;
+line-height:2.15;
+margin-bottom:24px;
+color:#f2f2f2;
+font-weight:300;
+}
+
+.highlight{
+color:#ff7db8;
+font-weight:600;
+}
+
+/* FINAL LINE */
+
+.final{
+text-align:center;
+font-size:1.5rem;
+margin-top:30px;
+color:#ff8ac2;
+font-weight:600;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding-bottom:60px;
+opacity:0.65;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.gallery-title{
+font-size:2.2rem;
+}
+
+.card{
+width:90%;
+height:420px;
+}
+
+.letter{
+padding:35px;
+}
+
+.letter h2{
+font-size:2.2rem;
+}
+
+.letter p{
+font-size:1rem;
+line-height:1.9;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="stars"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Happy 3 Months Meow 😺</h1>
+
+<div class="subtitle">
+3 months of love, chaos, memories & us ❤️
+</div>
+
+<div class="heart">💖</div>
+
+<div class="hearts">
+<span>❤️</span>
+<span>💖</span>
+<span>💕</span>
+<span>💘</span>
+<span>💞</span>
+</div>
+
+</section>
+
+<!-- PHOTO SECTION -->
+
+<h2 class="gallery-title">
+Pieces of Us, Frozen Forever ✨
+</h2>
+
+<div class="gallery">
+
+<div class="card">
+<img src="photo1.jpg">
+<div class="overlay">
+The moment my world started feeling softer 😺❤️
+</div>
+</div>
+
+<div class="card">
+<img src="photo2.jpg">
+<div class="overlay">
+One kiss… and suddenly nothing else mattered 💋
+</div>
+</div>
+
+<div class="card">
+<img src="photo3.jpg">
+<div class="overlay">
+My favorite place will always be next to you 😺💖
+</div>
+</div>
+
+</div>
+
+<!-- LETTER -->
+
+<section class="container">
+
+<div class="letter">
+
+<h2>To My Meow 😺</h2>
+
+<p>
+Meow 😺, honestly I still can’t believe that we’ve already completed three whole months together. Three months of talking, laughing, caring, getting attached, creating memories, and slowly becoming such an important part of each other’s lives. It feels unreal because sometimes it feels like we just met yesterday, but at the same time it feels like you’ve been in my life forever.
+</p>
+
+<p>
+Before you came into my life, days were honestly simple and repetitive. Nothing really felt exciting for too long. But then you entered my world so unexpectedly, and suddenly everything started feeling softer, brighter, and happier. Your messages became my favorite notifications. Your voice became my comfort. Your presence became something my heart started needing every single day.
+</p>
+
+<p>
+Babe, I don’t think you even realize how much happiness you bring into my life. Sometimes I randomly smile at my phone like an idiot because of something you said hours ago 😭❤️ And honestly? I love that feeling. I love how naturally you became the best part of my days.
+</p>
+
+<p>
+What I love the most about us is the comfort. The way we can talk for hours and still not get bored. The way even silence between us feels peaceful. The way your existence somehow makes stressful days feel lighter. That’s rare, Meow 😺. Really rare.
+</p>
+
+<p>
+There are so many little moments with you that stay in my head all the time. The random jokes, the late-night conversations, the cute fights, the emotional talks, the way you care, the way you react, the way you exist — everything about you slowly became special to me.
+</p>
+
+<p>
+And honestly? Out of everything in this world, I think my favorite thing is simply us. This connection. This feeling. This weird little world we created together. Because with you, even ordinary moments feel magical.
+</p>
+
+<p>
+Meow 😺, I don’t know what the future holds, but one thing I know for sure is that I want more of you in my life. More memories. More moments. More late-night talks. More laughs. More stupid conversations. More everything.
+</p>
+
+<p>
+Thank you for being here. Thank you for your care, your time, your effort, your attention, and all those tiny things you do without realizing how much they mean to me. You’ve genuinely made my life happier in ways I can’t fully explain.
+</p>
+
+<div class="final">
+I’m really lucky that it’s you, my Meow 😺❤️
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+Made with endless love for my Meow 😺
+</div>
+
+</body>
+</html>
